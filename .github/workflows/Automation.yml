@@ -64,7 +64,7 @@ jobs:
         username: ${{ secrets.GMAIL_USERNAME }}  # Your Gmail address
         password: ${{ secrets.GMAIL_APP_PASSWORD }}  # The App Password from Gmail    
         from: 'rammarshivane@exaqode.com'
-        to: 'rammarshivane@gmail.com,rammarshivane@exaqode.com'
+        to: 'rammarshivane@gmail.com,ram.marshivane@exaqode.com'
         subject: 'Test Automation Report for Test Execution'
         body: 'This is the test execution Report'
         attachments: 'playwright-report/**/*.html'
