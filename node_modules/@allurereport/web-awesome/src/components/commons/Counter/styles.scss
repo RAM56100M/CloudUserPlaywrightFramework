@@ -1,0 +1,21 @@
+@import "../../../assets/scss/mixins.scss";
+
+.counter {
+  background-color: var(--bg-control-secondary);
+  color: var(--on-text-primary);
+  border-radius: 12px;
+  @include status-bg-and-text();
+
+  &.size-s {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  &.size-m {
+    padding: 10px 2px;
+  }
+
+  &.size-l {
+    padding: 12px 4px;
+  }
+}

@@ -1,0 +1,26 @@
+.icon {
+  display: block;
+  overflow: hidden;
+
+  &.size-xs {
+    width: 12px;
+    height: 12px;
+  }
+
+  &.size-s {
+    width: 16px;
+    height: 16px;
+  }
+
+  &.size-m {
+    width: 20px;
+    height: 20px;
+  }
+
+  &.inline {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+}

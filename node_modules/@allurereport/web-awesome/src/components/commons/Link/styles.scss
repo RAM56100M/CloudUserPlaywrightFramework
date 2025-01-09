@@ -1,0 +1,46 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  font-family: inherit;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  appearance: none;
+  border: none;
+  color: var(--on-support-aldebaran);
+  cursor: pointer;
+  outline: 1px solid transparent;
+  outline-offset: 1px;
+  transition:
+    outline var(--interaction-transition-duration) ease-out,
+    border-color var(--color-change-transition-duration);
+
+  &:hover {
+    color: var(--on-support-aldebaran-medium);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    border-radius: 3px;
+    color: var(--on-support-aldebaran-medium);
+    outline: 1px solid var(--ad-other-focus);
+    outline-offset: 1px;
+  }
+
+  &:active {
+    color: var(--on-support-aldebaran-heavy);
+  }
+
+  &:visited {
+    color: var(--on-support-aldebaran);
+  }
+}

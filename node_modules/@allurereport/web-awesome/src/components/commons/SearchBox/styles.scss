@@ -1,0 +1,58 @@
+.inputWrap {
+  display: flex;
+  flex-grow: 1;
+  position: relative;
+}
+
+.input {
+  color: var(--on-text-primary);
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  font-family: inherit;
+  flex-grow: 1;
+  background-color: var(--bg-control-flat);
+  border: 1px solid var(--on-border-control);
+  padding: 7px;
+  padding-left: calc(7px + 16px + 7px);
+  border-radius: 6px;
+  transition:
+    background-color var(--color-change-transition-duration),
+    border-color var(--color-change-transition-duration);
+
+  &:hover:not(:focus) {
+    background-color: var(--bg-control-flat-medium);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--on-border-heavy);
+  }
+
+  &::placeholder {
+    color: var(--on-text-secondary);
+  }
+
+  &.inputClear {
+    padding-right: calc(7px + 16px + 7px);
+  }
+}
+
+.leadingIcon {
+  display: block;
+  top: 8px;
+  left: 8px;
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  color: var(--on-icon-primary);
+  z-index: 0;
+}
+
+.clearButton {
+  top: 4px;
+  right: 4px;
+  position: absolute;
+  z-index: 0;
+}

@@ -1,0 +1,558 @@
+.button {
+  --allure-btn-height: 0px;
+  --allure-btn-padding-horizontal: 0px;
+  --allure-btn-padding-vertical: 0px;
+  --allure-btn-radius: 0px;
+  --allure-btn-border: 0px;
+  --allure-btn-leading-icon-margin-right: 0px;
+  --allure-btn-dropdown-icon-margin-left: 0px;
+  --allure-btn-focus-ring-offset: 1px;
+  --allure-btn-bg-color: transparent;
+  --allure-btn-text-color: transparent;
+  --allure-btn-icon-color: transparent;
+  --allure-btn-border-color: transparent;
+  --allure-btn-icon-base-size: 16px;
+  --allure-btn-icon-size: var(--allure-btn-icon-base-size);
+  --allure-btn-pressed-scale: 0.96;
+
+  background-color: var(--allure-btn-bg-color);
+  border: var(--allure-btn-border) solid transparent;
+  border-color: var(--allure-btn-border-color);
+  border-radius: var(--allure-btn-radius);
+  padding: calc(var(--allure-btn-padding-vertical) - var(--allure-btn-border))
+    calc(var(--allure-btn-padding-horizontal) - var(--allure-btn-border));
+  max-height: var(--allure-btn-height);
+  height: var(--allure-btn-height);
+  max-width: max-content;
+  min-width: min-content;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition:
+    transform var(--interaction-transition-duration) ease-out,
+    outline var(--interaction-transition-duration) ease-out,
+    background-color var(--color-change-transition-duration),
+    border-color var(--color-change-transition-duration);
+  transform: scale(1);
+  outline-offset: var(--allure-btn-focus-ring-offset);
+  outline: var(--allure-btn-focus-ring-offset) solid transparent;
+
+  &.fullWidth {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &:disabled .contentIcon,
+  &:disabled .leadingIcon,
+  &:disabled .dropdownIcon {
+    user-select: none;
+  }
+
+  &.buttonIcon {
+    max-height: var(--allure-btn-height);
+    min-height: var(--allure-btn-height);
+    height: var(--allure-btn-height);
+    max-width: var(--allure-btn-height);
+    min-width: var(--allure-btn-height);
+    width: var(--allure-btn-height);
+    padding: calc(
+        var(--allure-btn-padding-vertical) - var(--allure-btn-border) -
+          (var(--allure-btn-icon-size) - var(--allure-btn-icon-base-size))
+      )
+      calc(
+        var(--allure-btn-padding-horizontal) - var(--allure-btn-border) -
+          (var(--allure-btn-icon-size) - var(--allure-btn-icon-base-size))
+      );
+  }
+
+  &:focus {
+    background-color: var(--allure-btn-bg-color);
+    outline: var(--allure-btn-focus-ring-offset) solid transparent;
+  }
+
+  /* Focus ring */
+  &:focus-visible {
+    outline: var(--allure-btn-focus-ring-offset) solid var(--ad-other-focus);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:active {
+    transform: scale(var(--allure-btn-pressed-scale));
+  }
+
+  &.size_l {
+    --allure-btn-height: 40px;
+    --allure-btn-padding-horizontal: 12px;
+    --allure-btn-padding-vertical: 10px;
+    --allure-btn-pressed-scale: 0.96;
+    --allure-btn-radius: 6px;
+    --allure-btn-leading-icon-margin-right: 8px;
+    --allure-btn-dropdown-icon-margin-left: 4px;
+    --allure-btn-icon-size: 20px;
+
+    &.buttonIcon {
+      --allure-btn-padding-horizontal: 10px;
+      --allure-btn-padding-vertical: 10px;
+    }
+  }
+
+  &.size_m {
+    --allure-btn-height: 32px;
+    --allure-btn-padding-horizontal: 8px;
+    --allure-btn-padding-vertical: 6px;
+    --allure-btn-pressed-scale: 0.94;
+    --allure-btn-radius: 6px;
+    --allure-btn-leading-icon-margin-right: 6px;
+    --allure-btn-dropdown-icon-margin-left: 4px;
+    --allure-btn-icon-size: 20px;
+
+    &.buttonIcon {
+      --allure-btn-padding-horizontal: 6px;
+      --allure-btn-padding-vertical: 6px;
+    }
+  }
+
+  &.size_s {
+    --allure-btn-height: 24px;
+    --allure-btn-padding-horizontal: 6px;
+    --allure-btn-padding-vertical: 4px;
+    --allure-btn-pressed-scale: 0.94;
+    --allure-btn-radius: 4px;
+    --allure-btn-leading-icon-margin-right: 4px;
+    --allure-btn-dropdown-icon-margin-left: 2px;
+    --allure-btn-icon-size: 16px;
+
+    &.buttonIcon {
+      --allure-btn-padding-horizontal: 4px;
+      --allure-btn-padding-vertical: 4px;
+    }
+  }
+
+  &.icon_size_xs {
+    --allure-btn-icon-size: 12px;
+
+    &.buttonIcon {
+      --allure-btn-padding-horizontal: 0;
+      --allure-btn-icon-size: 12px;
+      --allure-btn-padding-vertical: 4px;
+      --allure-btn-height: 32px;
+      --allure-btn-width: 20px;
+      width: var(--allure-btn-width);
+      min-width: var(--allure-btn-width);
+    }
+  }
+
+  &.style_primary {
+    --allure-btn-border: 0px;
+    --allure-btn-border-color: transparent;
+    --allure-btn-bg-color: var(--bg-support-aldebaran);
+    --allure-btn-text-color: var(--constant-on-text-primary);
+    --allure-btn-icon-color: var(--constant-on-icon-primary);
+
+    &:hover {
+      --allure-btn-bg-color: var(--bg-support-aldebaran-medium);
+    }
+
+    &:focus-visible {
+      --allure-btn-bg-color: var(--bg-support-aldebaran-medium);
+    }
+
+    &:disabled {
+      --allure-btn-bg-color: var(--bg-control-secondary);
+      --allure-btn-text-color: var(--on-text-hint);
+      --allure-btn-icon-color: var(--on-icon-hint);
+    }
+
+    &:active,
+    .active {
+      --allure-btn-bg-color: var(--bg-support-aldebaran-heavy);
+    }
+  }
+
+  &.style_primary.danger {
+    --allure-btn-border-color: transparent;
+    --allure-btn-bg-color: var(--bg-support-capella);
+    --allure-btn-text-color: var(--constant-on-text-primary);
+    --allure-btn-icon-color: var(--constant-on-icon-primary);
+
+    &:hover {
+      --allure-btn-bg-color: var(--bg-support-capella-medium);
+    }
+
+    &:focus-visible {
+      --allure-btn-bg-color: var(--bg-support-capella-medium);
+    }
+
+    &:active,
+    .active {
+      --allure-btn-bg-color: var(--bg-support-capella-heavy);
+    }
+  }
+
+  &.style_primary.positive {
+    --allure-btn-border-color: transparent;
+    --allure-btn-bg-color: var(--bg-support-castor);
+    --allure-btn-text-color: var(--constant-on-text-primary);
+    --allure-btn-icon-color: var(--constant-on-icon-primary);
+
+    &:hover {
+      --allure-btn-bg-color: var(--bg-support-castor-medium);
+    }
+
+    &:focus-visible {
+      --allure-btn-bg-color: var(--bg-support-castor-medium);
+    }
+
+    &:active,
+    &.active {
+      --allure-btn-bg-color: var(--bg-support-castor-heavy);
+    }
+  }
+
+  &.style_outline {
+    --allure-btn-border: 1px;
+    --allure-btn-border-color: var(--on-border-control);
+    --allure-btn-bg-color: var(--bg-control-flat);
+    --allure-btn-text-color: var(--on-text-primary);
+    --allure-btn-icon-color: var(--on-icon-primary);
+
+    &:hover {
+      --allure-btn-bg-color: var(--bg-control-flat-medium);
+    }
+
+    &:focus-visible {
+      --allure-btn-bg-color: var(--bg-control-flat-medium);
+    }
+
+    &:active,
+    &.active {
+      --allure-btn-bg-color: var(--bg-control-flat-heavy);
+    }
+
+    &:disabled {
+      --allure-btn-border: 0px;
+      --allure-btn-border-color: transparent;
+      --allure-btn-bg-color: var(--bg-control-secondary);
+      --allure-btn-text-color: var(--on-text-hint);
+      --allure-btn-icon-color: var(--on-icon-hint);
+    }
+  }
+
+  &.style_outline.danger {
+    --allure-btn-border-color: var(--on-border-control);
+    --allure-btn-bg-color: var(--bg-control-flat);
+    --allure-btn-text-color: var(--on-support-capella);
+    --allure-btn-icon-color: var(--on-support-capella);
+
+    &:hover {
+      --allure-btn-bg-color: var(--bg-support-capella);
+    }
+
+    &:focus-visible {
+      --allure-btn-bg-color: var(--bg-support-capella);
+    }
+
+    &:active,
+    &.active {
+      --allure-btn-bg-color: var(--bg-support-capella-medium);
+    }
+  }
+
+  &.style_outline.positive {
+    --allure-btn-border-color: var(--on-border-control);
+    --allure-btn-bg-color: var(--bg-control-flat);
+    --allure-btn-text-color: var(--on-support-castor);
+    --allure-btn-icon-color: var(--on-support-castor);
+
+    &:hover {
+      --allure-btn-bg-color: var(--bg-support-castor);
+    }
+
+    &:focus-visible {
+      --allure-btn-bg-color: var(--bg-support-castor);
+    }
+
+    &:active,
+    &.active {
+      --allure-btn-bg-color: var(--bg-support-castor-medium);
+    }
+  }
+
+  &.style_ghost {
+    --allure-btn-border: 0px;
+    --allure-btn-border-color: transparent;
+    --allure-btn-bg-color: var(--bg-control-flat);
+    --allure-btn-text-color: var(--on-text-primary);
+    --allure-btn-icon-color: var(--on-icon-primary);
+
+    &:hover {
+      --allure-btn-bg-color: var(--bg-control-flat-medium);
+    }
+
+    &:active,
+    &.active {
+      --allure-btn-bg-color: var(--bg-control-flat-heavy);
+    }
+
+    &:disabled {
+      --allure-btn-bg-color: transparent;
+      --allure-btn-text-color: var(--on-text-hint);
+      --allure-btn-icon-color: var(--on-icon-hint);
+    }
+  }
+
+  &.style_ghost.danger {
+    --allure-btn-border: 0px;
+    --allure-btn-border-color: transparent;
+    --allure-btn-bg-color: transparent;
+    --allure-btn-text-color: var(--on-support-capella);
+    --allure-btn-icon-color: var(--on-support-capella);
+
+    &:hover {
+      --allure-btn-bg-color: var(--bg-support-capella);
+    }
+
+    &:focus-visible {
+      --allure-btn-bg-color: var(--bg-support-capella);
+    }
+
+    &:active,
+    &.active {
+      --allure-btn-bg-color: var(--bg-support-capella-medium);
+    }
+  }
+
+  &.style_ghost.positive {
+    --allure-btn-border: 0px;
+    --allure-btn-border-color: transparent;
+    --allure-btn-bg-color: transparent;
+    --allure-btn-text-color: var(--on-support-castor);
+    --allure-btn-icon-color: var(--on-support-castor);
+
+    &:hover {
+      --allure-btn-bg-color: var(--bg-support-castor);
+    }
+
+    &:focus-visible {
+      --allure-btn-bg-color: var(--bg-support-castor);
+    }
+
+    &:active,
+    &.active {
+      --allure-btn-bg-color: var(--bg-support-castor-medium);
+    }
+  }
+
+  &.style_flat {
+    --allure-btn-border: 0px;
+    --allure-btn-border-color: transparent;
+    --allure-btn-bg-color: var(--bg-control-secondary);
+    --allure-btn-text-color: var(--on-text-primary);
+    --allure-btn-icon-color: var(--on-icon-primary);
+
+    &:hover {
+      --allure-btn-bg-color: var(--bg-control-secondary-medium);
+    }
+
+    &:focus-visible {
+      --allure-btn-bg-color: var(--bg-control-secondary-medium);
+    }
+
+    &:active,
+    &.active {
+      --allure-btn-bg-color: var(--bg-control-secondary-heavy);
+    }
+
+    &:disabled {
+      --allure-btn-bg-color: var(--bg-control-secondary);
+      --allure-btn-text-color: var(--on-text-hint);
+      --allure-btn-icon-color: var(--on-icon-hint);
+    }
+  }
+
+  &.style_flat.danger {
+    --allure-btn-border-color: transparent;
+    --allure-btn-bg-color: var(--bg-support-capella);
+    --allure-btn-text-color: var(--on-support-capella);
+    --allure-btn-icon-color: var(--on-support-capella);
+
+    &:hover {
+      --allure-btn-bg-color: var(--bg-support-capella-medium);
+    }
+
+    &:focus-visible {
+      --allure-btn-bg-color: var(--bg-support-capella-medium);
+    }
+
+    &:active,
+    &.active {
+      --allure-btn-bg-color: var(--bg-alpha-capella-heavy);
+    }
+  }
+
+  &.style_flat.positive {
+    --allure-btn-border-color: transparent;
+    --allure-btn-bg-color: var(--bg-support-castor);
+    --allure-btn-text-color: var(--on-support-castor);
+    --allure-btn-icon-color: var(--on-support-castor);
+
+    &:hover {
+      --allure-btn-bg-color: var(--bg-support-castor-medium);
+    }
+
+    &:focus-visible {
+      --allure-btn-bg-color: var(--bg-support-castor-medium);
+    }
+
+    &:active,
+    &.active {
+      --allure-btn-bg-color: var(--bg-alpha-castor-heavy);
+    }
+  }
+
+  &.style_raised {
+    --allure-btn-border: 1px;
+    --allure-btn-border-color: var(--on-border-primary);
+    --allure-btn-bg-color: var(--bg-base-modal);
+    --allure-btn-text-color: var(--on-text-primary);
+    --allure-btn-icon-color: var(--on-icon-primary);
+
+    box-shadow: var(--shadow-raised);
+
+    &:hover {
+      --allure-btn-bg-color: var(--bg-control-flat-medium);
+    }
+
+    &:focus-visible {
+      --allure-btn-bg-color: var(--bg-control-flat-medium);
+    }
+
+    &:active,
+    &.active {
+      --allure-btn-bg-color: var(--bg-control-flat-heavy);
+    }
+
+    &:disabled {
+      --allure-btn-border: 0px;
+      --allure-btn-border-color: transparent;
+      --allure-btn-bg-color: var(--bg-control-secondary);
+      --allure-btn-text-color: var(--on-text-hint);
+      --allure-btn-icon-color: var(--on-icon-hint);
+
+      box-shadow: none;
+    }
+  }
+
+  &.style_raised.danger {
+    --allure-btn-text-color: var(--on-support-capella);
+    --allure-btn-icon-color: var(--on-support-capella);
+
+    &:hover {
+      --allure-btn-bg-color: var(--bg-support-capella);
+    }
+
+    &:focus-visible {
+      --allure-btn-bg-color: var(--bg-support-capella);
+    }
+
+    &:active,
+    &.active {
+      --allure-btn-bg-color: var(--bg-support-capella-medium);
+    }
+  }
+
+  &.style_raised.positive {
+    --allure-btn-text-color: var(--on-support-castor);
+    --allure-btn-icon-color: var(--on-support-castor);
+
+    &:hover {
+      --allure-btn-bg-color: var(--bg-support-castor);
+    }
+
+    &:focus-visible {
+      --allure-btn-bg-color: var(--bg-support-castor);
+    }
+
+    &:active,
+    &.active {
+      --allure-btn-bg-color: var(--bg-support-castor-medium);
+    }
+  }
+}
+
+.text {
+  color: var(--allure-btn-text-color);
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.pending .text,
+.pending .leadingIcon,
+.pending .dropdownIcon,
+.pending .contentIcon {
+  visibility: hidden;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  user-select: none;
+}
+
+.leadingIcon {
+  margin-right: var(--allure-btn-leading-icon-margin-right);
+}
+
+.leadingIcon,
+.contentIcon,
+.dropdownIcon {
+  width: var(--allure-btn-icon-size) !important;
+  height: var(--allure-btn-icon-size) !important;
+  color: var(--on-icon-secondary);
+  transition: color var(--color-change-transition-duration);
+  user-select: none;
+
+  &:hover {
+    color: var(--allure-btn-icon-color);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.dropdownIcon {
+  margin-left: var(--allure-btn-dropdown-icon-margin-left);
+  transition:
+    transform var(--interaction-transition-duration) ease-in,
+    color var(--color-change-transition-duration);
+}
+
+.button.active .dropdownIcon {
+  transform: rotate(180deg);
+}
+
+.pending .spinner {
+  display: flex;
+}
+
+.spinner {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  user-select: none;
+  color: var(--allure-btn-icon-color);
+  display: none;
+}
