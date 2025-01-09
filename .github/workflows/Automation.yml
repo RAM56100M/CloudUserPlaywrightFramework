@@ -1,0 +1,70 @@
+name: Biosero Automation test Automation.yml
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout code
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # Step 2: Set up Node.js environment
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    # Step 3: Install dependencies
+    - name: Install dependencies
+      run: npm ci --with-deps
+
+    # Step 4: Install Playwright browsers
+    - name: Install Playwright browsers
+      run: npx playwright install
+
+    - name: Running Playwright Test
+      run: npm run runChrome
+
+    - name: Print Artifact path
+      run: echo ${{ github.workspace }}/.github/workflow/${{ github.run_id }}/artifacts/
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: report
+        path: |
+          playwright-report/
+          !playwright-report/**/*.md
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+       name: my-artifact  # The name of the artifact
+       path: ./output/report.txt  # Replace with the correct file or directory path
+        
+
+    - name: Show artifacts
+      run: ls -lR
+
+    - name: Send email
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 587
+        username: ${{ secrets.GMAIL_USERNAME }}  # Your Gmail address
+        password: ${{ secrets.GMAIL_APP_PASSWORD }}  # The App Password from Gmail    
+        from: 'rammarshivane@exaqode.com'
+        to: 'rammarshivane@gmail.com,rammarshivane@exaqode.com'
+        subject: 'Test Automation Report for Test Execution'
+        body: 'This is the test execution Report'
+        attachments: 'playwright-report/**/*.html'
