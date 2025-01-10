@@ -5,7 +5,7 @@ test.beforeEach(async ({ page }) =>{
   
   const login = new LoginPage(page);
   await page.goto('https://portal.dev.biosero.com');
-  await login.doLogin('rammarshivane@biosero.com', 'Ram@7670'); // Login before each test
+  await login.doLogin('rammarshivane@biosero.com', 'Ram@7670'); 
   
 });
 

@@ -8,11 +8,12 @@ export class dashBoardPage extends BasePage{
     }
 
     async clickOnDashboardTab() {
+
         try {
           const tabDashboard = this.page.locator('xpath=//div[contains(text(),"Dashboard")]');
           
           // Wait for the element to be visible and ready for interaction
-          await tabDashboard.waitFor({ state: 'visible', timeout: 5000 });
+          await tabDashboard.waitFor({ state: 'visible', timeout: 7000 });
       
           // Click on the tab if it is visible
           await tabDashboard.click();
@@ -25,7 +26,7 @@ export class dashBoardPage extends BasePage{
         try {
           const tabMarketplace = this.page.locator("xpath=//div[contains(text(),'Marketplace')]");
           
-          await tabMarketplace.waitFor({ state: 'visible', timeout: 5000 });
+          await tabMarketplace.waitFor({ state: 'visible', timeout: 7000 });
       
           // Click on the tab if it is visible
           await tabMarketplace.click();

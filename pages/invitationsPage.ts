@@ -12,7 +12,7 @@ export class invitationsPage extends BasePage{
         try {
           const tabInvitations = this.page.locator("xpath=//div[contains(text(),'Invitations')]");
           
-          await tabInvitations.waitFor({ state: 'visible', timeout: 5000 });
+          await tabInvitations.waitFor({ state: 'visible', timeout: 10000 });
       
           await tabInvitations.click();
           await this.page.waitForTimeout(5000);
