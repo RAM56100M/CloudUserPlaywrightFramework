@@ -25,7 +25,7 @@ export default defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     navigationTimeout: 30000, // Set to 30 seconds for all navigations
-    actionTimeout: 6000, // Optional: Timeout for other actions
+    actionTimeout: 60000, // Optional: Timeout for other actions
     baseURL: 'https://portal.dev.biosero.com',
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',

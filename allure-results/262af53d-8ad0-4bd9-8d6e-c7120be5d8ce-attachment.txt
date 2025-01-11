@@ -1,0 +1,69 @@
+Failed to click on the Marketplace tab ExpectError: expect(locator).toHaveText(expected)
+
+Locator: locator('//div[contains(text(), \'Marketplace\')]')
+Expected string: "Marketplace"
+Received: <element(s) not found>
+Call log:
+  - expect.toHaveText with timeout 5000ms
+  - waiting for locator('//div[contains(text(), \'Marketplace\')]')
+
+    at D:\Github Repo's\CloudUserAutomationFramework\CloudUserAutomation\tests\DashboardTab.spec.ts:54:35 {
+  matcherResult: {
+    name: 'toHaveText',
+    expected: 'Marketplace',
+    message: '\x1B[2mexpect(\x1B[22m\x1B[31mlocator\x1B[39m\x1B[2m).\x1B[22mtoHaveText\x1B[2m(\x1B[22m\x1B[32mexpected\x1B[39m\x1B[2m)\x1B[22m\n' +
+      '\n' +
+      "Locator: locator('//div[contains(text(), \\'Marketplace\\')]')\n" +
+      'Expected string: \x1B[32m"Marketplace"\x1B[39m\n' +
+      'Received: <element(s) not found>\n' +
+      'Call log:\n' +
+      '\x1B[2m  - expect.toHaveText with timeout 5000ms\x1B[22m\n' +
+      "\x1B[2m  - waiting for locator('//div[contains(text(), \\'Marketplace\\')]')\x1B[22m\n",
+    pass: false,
+    actual: '<element(s) not found>',
+    log: [
+      '  - expect.toHaveText with timeout 5000ms',
+      "  - waiting for locator('//div[contains(text(), \\'Marketplace\\')]')"
+    ],
+    timeout: undefined
+  },
+  [Symbol(step)]: {
+    stepId: 'expect@22',
+    category: 'expect',
+    title: 'expect.toHaveText',
+    params: { expected: 'Marketplace' },
+    infectParentStepsWithError: undefined,
+    boxedStack: undefined,
+    location: {
+      file: "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\tests\\DashboardTab.spec.ts",
+      line: 54,
+      column: 35,
+      function: undefined
+    },
+    steps: [],
+    complete: [Function: complete],
+    endWallTime: 1736585974313,
+    error: {
+      message: 'Error: \x1B[2mexpect(\x1B[22m\x1B[31mlocator\x1B[39m\x1B[2m).\x1B[22mtoHaveText\x1B[2m(\x1B[22m\x1B[32mexpected\x1B[39m\x1B[2m)\x1B[22m\n' +
+        '\n' +
+        "Locator: locator('//div[contains(text(), \\'Marketplace\\')]')\n" +
+        'Expected string: \x1B[32m"Marketplace"\x1B[39m\n' +
+        'Received: <element(s) not found>\n' +
+        'Call log:\n' +
+        '\x1B[2m  - expect.toHaveText with timeout 5000ms\x1B[22m\n' +
+        "\x1B[2m  - waiting for locator('//div[contains(text(), \\'Marketplace\\')]')\x1B[22m\n",
+      stack: 'Error: \x1B[2mexpect(\x1B[22m\x1B[31mlocator\x1B[39m\x1B[2m).\x1B[22mtoHaveText\x1B[2m(\x1B[22m\x1B[32mexpected\x1B[39m\x1B[2m)\x1B[22m\n' +
+        '\n' +
+        "Locator: locator('//div[contains(text(), \\'Marketplace\\')]')\n" +
+        'Expected string: \x1B[32m"Marketplace"\x1B[39m\n' +
+        'Received: <element(s) not found>\n' +
+        'Call log:\n' +
+        '\x1B[2m  - expect.toHaveText with timeout 5000ms\x1B[22m\n' +
+        "\x1B[2m  - waiting for locator('//div[contains(text(), \\'Marketplace\\')]')\x1B[22m\n" +
+        '\n' +
+        "    at D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\tests\\DashboardTab.spec.ts:54:35",
+      cause: undefined,
+      matcherResult: [Object]
+    }
+  }
+}
