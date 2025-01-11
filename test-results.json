@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 6
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -67,599 +67,6 @@
   },
   "suites": [
     {
-      "title": "DashboardTab.spec.ts",
-      "file": "DashboardTab.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Verify user lands on the Dashboard tab",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "adminPortal",
-              "projectName": "adminPortal",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 28611,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Login Successful\n"
-                    },
-                    {
-                      "text": "Login successful\n"
-                    },
-                    {
-                      "text": "Successfully landed on the Dashboard tab\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-10T20:14:19.767Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\test-results\\DashboardTab-Verify-user-lands-on-the-Dashboard-tab-adminPortal\\video.webm"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a296997f95281b8de261-170e7df0e21f575e914d",
-          "file": "DashboardTab.spec.ts",
-          "line": 13,
-          "column": 5
-        },
-        {
-          "title": "Verify user can click on the Marketplace tab",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "adminPortal",
-              "projectName": "adminPortal",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 25409,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Login Successful\n"
-                    },
-                    {
-                      "text": "Login successful\n"
-                    }
-                  ],
-                  "stderr": [
-                    {
-                      "text": "Failed to click on the Marketplace tab ExpectError: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nLocator: locator('//div[contains(text(), \\'Marketplace\\')]')\nExpected string: \u001b[32m\"Marketplace\"\u001b[39m\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - expect.toHaveText with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('//div[contains(text(), \\'Marketplace\\')]')\u001b[22m\n\n    at \u001b[90mD:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\\u001b[39mtests\\DashboardTab.spec.ts:54:35 {\n  matcherResult: {\n    name: \u001b[32m'toHaveText'\u001b[39m,\n    expected: \u001b[32m'Marketplace'\u001b[39m,\n    message: \u001b[32m'\\x1B[31mTimed out 5000ms waiting for \\x1B[39m\\x1B[2mexpect(\\x1B[22m\\x1B[31mlocator\\x1B[39m\\x1B[2m).\\x1B[22mtoHaveText\\x1B[2m(\\x1B[22m\\x1B[32mexpected\\x1B[39m\\x1B[2m)\\x1B[22m\\n'\u001b[39m +\n      \u001b[32m'\\n'\u001b[39m +\n      \u001b[32m\"Locator: locator('//div[contains(text(), \\\\'Marketplace\\\\')]')\\n\"\u001b[39m +\n      \u001b[32m'Expected string: \\x1B[32m\"Marketplace\"\\x1B[39m\\n'\u001b[39m +\n      \u001b[32m'Received: <element(s) not found>\\n'\u001b[39m +\n      \u001b[32m'Call log:\\n'\u001b[39m +\n      \u001b[32m'\\x1B[2m  - expect.toHaveText with timeout 5000ms\\x1B[22m\\n'\u001b[39m +\n      \u001b[32m\"\\x1B[2m  - waiting for locator('//div[contains(text(), \\\\'Marketplace\\\\')]')\\x1B[22m\\n\"\u001b[39m,\n    pass: \u001b[33mfalse\u001b[39m,\n    actual: \u001b[32m'<element(s) not found>'\u001b[39m,\n    log: [\n      \u001b[32m'  - expect.toHaveText with timeout 5000ms'\u001b[39m,\n      \u001b[32m\"  - waiting for locator('//div[contains(text(), \\\\'Marketplace\\\\')]')\"\u001b[39m\n    ],\n    timeout: \u001b[33m5000\u001b[39m\n  },\n  [\u001b[32mSymbol(step)\u001b[39m]: {\n    stepId: \u001b[32m'expect@20'\u001b[39m,\n    category: \u001b[32m'expect'\u001b[39m,\n    title: \u001b[32m'expect.toHaveText'\u001b[39m,\n    params: { expected: \u001b[32m'Marketplace'\u001b[39m },\n    infectParentStepsWithError: \u001b[90mundefined\u001b[39m,\n    boxedStack: \u001b[90mundefined\u001b[39m,\n    location: {\n      file: \u001b[32m\"D:\\\\Github Repo's\\\\CloudUserAutomationFramework\\\\CloudUserAutomation\\\\tests\\\\DashboardTab.spec.ts\"\u001b[39m,\n      line: \u001b[33m54\u001b[39m,\n      column: \u001b[33m35\u001b[39m,\n      function: \u001b[90mundefined\u001b[39m\n    },\n    steps: [],\n    complete: \u001b[36m[Function: complete]\u001b[39m,\n    endWallTime: \u001b[33m1736540113761\u001b[39m,\n    error: {\n      message: \u001b[32m'Error: \\x1B[31mTimed out 5000ms waiting for \\x1B[39m\\x1B[2mexpect(\\x1B[22m\\x1B[31mlocator\\x1B[39m\\x1B[2m).\\x1B[22mtoHaveText\\x1B[2m(\\x1B[22m\\x1B[32mexpected\\x1B[39m\\x1B[2m)\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m\"Locator: locator('//div[contains(text(), \\\\'Marketplace\\\\')]')\\n\"\u001b[39m +\n        \u001b[32m'Expected string: \\x1B[32m\"Marketplace\"\\x1B[39m\\n'\u001b[39m +\n        \u001b[32m'Received: <element(s) not found>\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m'\\x1B[2m  - expect.toHaveText with timeout 5000ms\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for locator('//div[contains(text(), \\\\'Marketplace\\\\')]')\\x1B[22m\\n\"\u001b[39m,\n      stack: \u001b[32m'Error: \\x1B[31mTimed out 5000ms waiting for \\x1B[39m\\x1B[2mexpect(\\x1B[22m\\x1B[31mlocator\\x1B[39m\\x1B[2m).\\x1B[22mtoHaveText\\x1B[2m(\\x1B[22m\\x1B[32mexpected\\x1B[39m\\x1B[2m)\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m\"Locator: locator('//div[contains(text(), \\\\'Marketplace\\\\')]')\\n\"\u001b[39m +\n        \u001b[32m'Expected string: \\x1B[32m\"Marketplace\"\\x1B[39m\\n'\u001b[39m +\n        \u001b[32m'Received: <element(s) not found>\\n'\u001b[39m +\n        \u001b[32m'Call log:\\n'\u001b[39m +\n        \u001b[32m'\\x1B[2m  - expect.toHaveText with timeout 5000ms\\x1B[22m\\n'\u001b[39m +\n        \u001b[32m\"\\x1B[2m  - waiting for locator('//div[contains(text(), \\\\'Marketplace\\\\')]')\\x1B[22m\\n\"\u001b[39m +\n        \u001b[32m'\\n'\u001b[39m +\n        \u001b[32m\"    at D:\\\\Github Repo's\\\\CloudUserAutomationFramework\\\\CloudUserAutomation\\\\tests\\\\DashboardTab.spec.ts:54:35\"\u001b[39m,\n      cause: \u001b[90mundefined\u001b[39m,\n      matcherResult: \u001b[36m[Object]\u001b[39m\n    }\n  }\n}\n"
-                    }
-                  ],
-                  "retry": 0,
-                  "startTime": "2025-01-10T20:14:48.570Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\test-results\\DashboardTab-Verify-user-can-click-on-the-Marketplace-tab-adminPortal\\video.webm"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\test-results\\DashboardTab-Verify-user-can-click-on-the-Marketplace-tab-adminPortal\\video-1.webm"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "a296997f95281b8de261-bc18ea8cafd9f885b1f9",
-          "file": "DashboardTab.spec.ts",
-          "line": 29,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "invitationsTab.spec.ts",
-      "file": "invitationsTab.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Verify user can Click on the Invitations tab",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "adminPortal",
-              "projectName": "adminPortal",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "failed",
-                  "duration": 12054,
-                  "error": {
-                    "message": "TimeoutError: page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n",
-                    "stack": "TimeoutError: page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n\n    at D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\tests\\invitationsTab.spec.ts:6:14",
-                    "location": {
-                      "file": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\tests\\invitationsTab.spec.ts",
-                      "column": 14,
-                      "line": 6
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m invitations \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m invitationsPage(page)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://portal.dev.biosero.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m invitations\u001b[33m.\u001b[39mdoLogin(\u001b[32m'rammarshivane@biosero.com'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Ram@7670'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\tests\\invitationsTab.spec.ts",
-                        "column": 14,
-                        "line": 6
-                      },
-                      "message": "TimeoutError: page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m invitations \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m invitationsPage(page)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://portal.dev.biosero.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m invitations\u001b[33m.\u001b[39mdoLogin(\u001b[32m'rammarshivane@biosero.com'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Ram@7670'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\tests\\invitationsTab.spec.ts:6:14\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-10T20:14:19.760Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\test-results\\invitationsTab-Verify-user-can-Click-on-the-Invitations-tab-adminPortal\\video.webm"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\tests\\invitationsTab.spec.ts",
-                    "column": 14,
-                    "line": 6
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "6304b1875834b372957f-0550ba99de8ef465781f",
-          "file": "invitationsTab.spec.ts",
-          "line": 10,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "loginOnceToPortal.spec.ts",
-      "file": "loginOnceToPortal.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Login",
-          "file": "loginOnceToPortal.spec.ts",
-          "line": 12,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Verify user can login to the Admin portal using valid credentials",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "adminPortal",
-                  "projectName": "adminPortal",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 21936,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Login Successful\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-10T20:14:19.823Z",
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\test-results\\loginOnceToPortal-Login-Ve-dd694-tal-using-valid-credentials-adminPortal\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "c6bd191efe3fab44ca10-5ab9eb2e8387bfd2b196",
-              "file": "loginOnceToPortal.spec.ts",
-              "line": 14,
-              "column": 5
-            },
-            {
-              "title": "Verify user can logout from the Admin Portal successfully",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "adminPortal",
-                  "projectName": "adminPortal",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "status": "passed",
-                      "duration": 23275,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Login Successful\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-10T20:14:42.012Z",
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\test-results\\loginOnceToPortal-Login-Ve-608d3-e-Admin-Portal-successfully-adminPortal\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "c6bd191efe3fab44ca10-a21bd9d6620e968cc533",
-              "file": "loginOnceToPortal.spec.ts",
-              "line": 19,
-              "column": 5
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "loginPageScenarios.spec.ts",
-      "file": "loginPageScenarios.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Login Tests",
-          "file": "loginPageScenarios.spec.ts",
-          "line": 13,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Verify user can log in to the Admin portal using valid credentials",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "adminPortal",
-                  "projectName": "adminPortal",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 23775,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Login Successful\n"
-                        },
-                        {
-                          "text": "Page Title: User Portal\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-10T20:14:19.819Z",
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\test-results\\loginPageScenarios-Login-T-927e6-tal-using-valid-credentials-adminPortal\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "e1f6d189d4d3b6f6096a-af1e0f7bcee6b2b1ccc9",
-              "file": "loginPageScenarios.spec.ts",
-              "line": 15,
-              "column": 7
-            },
-            {
-              "title": "Verify user cannot log in to the Admin portal using an invalid password",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "adminPortal",
-                  "projectName": "adminPortal",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 14194,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Login Failed. Error Message: The username or password provided in the request are invalid.\n"
-                        },
-                        {
-                          "text": "Login failed because: \n          The username or password provided in the request are invalid.\n        \n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-10T20:14:43.868Z",
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\test-results\\loginPageScenarios-Login-T-0e733-l-using-an-invalid-password-adminPortal\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "e1f6d189d4d3b6f6096a-d07c923a2997ae75d961",
-              "file": "loginPageScenarios.spec.ts",
-              "line": 25,
-              "column": 7
-            },
-            {
-              "title": "Verify user cannot log in to the Admin portal using an invalid email",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "adminPortal",
-                  "projectName": "adminPortal",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 15494,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Login Failed. Error Message: The username or password provided in the request are invalid.\n"
-                        },
-                        {
-                          "text": "Login failed because: \n          The username or password provided in the request are invalid.\n        \n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-10T20:14:58.074Z",
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\test-results\\loginPageScenarios-Login-T-ad53d-rtal-using-an-invalid-email-adminPortal\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "e1f6d189d4d3b6f6096a-7a736ca8e8241045eb2a",
-              "file": "loginPageScenarios.spec.ts",
-              "line": 33,
-              "column": 7
-            },
-            {
-              "title": "Verify user can see the Dashboard on successful login",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "adminPortal",
-                  "projectName": "adminPortal",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 15176,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Login Successful\n"
-                        },
-                        {
-                          "text": "Successfully landed on the dashboard\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-10T20:15:13.575Z",
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\test-results\\loginPageScenarios-Login-T-fb180-shboard-on-successful-login-adminPortal\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "e1f6d189d4d3b6f6096a-2b559c97864db96d3ab4",
-              "file": "loginPageScenarios.spec.ts",
-              "line": 40,
-              "column": 7
-            },
-            {
-              "title": "Verify user can log out of the Admin portal successfully",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "adminPortal",
-                  "projectName": "adminPortal",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 20294,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "Login Successful\n"
-                        },
-                        {
-                          "text": "Logout successful\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-01-10T20:15:28.766Z",
-                      "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\test-results\\loginPageScenarios-Login-T-3318c-e-Admin-portal-successfully-adminPortal\\video.webm"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "e1f6d189d4d3b6f6096a-eecf28cd0b41a005e68c",
-              "file": "loginPageScenarios.spec.ts",
-              "line": 52,
-              "column": 7
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "membersTab.spec.ts",
-      "file": "membersTab.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Verify user can Click on the Members tab",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "adminPortal",
-              "projectName": "adminPortal",
-              "results": [
-                {
-                  "workerIndex": 4,
-                  "status": "failed",
-                  "duration": 11945,
-                  "error": {
-                    "message": "TimeoutError: page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n",
-                    "stack": "TimeoutError: page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n\n    at D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\tests\\membersTab.spec.ts:6:14",
-                    "location": {
-                      "file": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\tests\\membersTab.spec.ts",
-                      "column": 14,
-                      "line": 6
-                    },
-                    "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m \u001b[33mMembers\u001b[39m \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m membersPage(page)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://portal.dev.biosero.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[33mMembers\u001b[39m\u001b[33m.\u001b[39mdoLogin(\u001b[32m'rammarshivane@biosero.com'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Ram@7670'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\tests\\membersTab.spec.ts",
-                        "column": 14,
-                        "line": 6
-                      },
-                      "message": "TimeoutError: page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://portal.dev.biosero.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 5 |\u001b[39m   \u001b[36mconst\u001b[39m \u001b[33mMembers\u001b[39m \u001b[33m=\u001b[39m \u001b[36mnew\u001b[39m membersPage(page)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://portal.dev.biosero.com'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mawait\u001b[39m \u001b[33mMembers\u001b[39m\u001b[33m.\u001b[39mdoLogin(\u001b[32m'rammarshivane@biosero.com'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Ram@7670'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\tests\\membersTab.spec.ts:6:14\u001b[22m"
-                    }
-                  ],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-01-10T20:14:19.818Z",
-                  "attachments": [
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\test-results\\membersTab-Verify-user-can-Click-on-the-Members-tab-adminPortal\\video.webm"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\tests\\membersTab.spec.ts",
-                    "column": 14,
-                    "line": 6
-                  }
-                }
-              ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "4be6c5ebb0e770d7dab2-802e6acafd6060a504fa",
-          "file": "membersTab.spec.ts",
-          "line": 10,
-          "column": 5
-        }
-      ]
-    },
-    {
       "title": "organizationTab.spec.ts",
       "file": "organizationTab.spec.ts",
       "column": 0,
@@ -667,7 +74,7 @@
       "specs": [
         {
           "title": "Verify user can Click on the Organization tab",
-          "ok": true,
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -678,31 +85,52 @@
               "projectName": "adminPortal",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "status": "passed",
-                  "duration": 27383,
-                  "errors": [],
+                  "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 12697,
+                  "error": {
+                    "message": "Error: Failed to Login",
+                    "stack": "Error: Failed to Login\n    at organizationPage.doLogin (D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\pages\\basePage.ts:44:11)\n    at D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\tests\\organizationTab.spec.ts:7:3",
+                    "location": {
+                      "file": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\pages\\basePage.ts",
+                      "column": 11,
+                      "line": 44
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m     }\n \u001b[90m 47 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\pages\\basePage.ts",
+                        "column": 11,
+                        "line": 44
+                      },
+                      "message": "Error: Failed to Login\n\n\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m     }\n \u001b[90m 47 |\u001b[39m\u001b[0m\n\u001b[2m    at organizationPage.doLogin (D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\pages\\basePage.ts:44:11)\u001b[22m\n\u001b[2m    at D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\tests\\organizationTab.spec.ts:7:3\u001b[22m"
+                    }
+                  ],
                   "stdout": [
                     {
-                      "text": "Login Successful\n"
-                    },
-                    {
-                      "text": "Found 'Organization' text successfully\n"
+                      "text": "An error occurred while trying to login: TimeoutError: locator.fill: Timeout 6000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input#signInName')\u001b[22m\n\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-01-10T20:14:19.879Z",
+                  "startTime": "2025-01-11T08:38:08.318Z",
                   "attachments": [
                     {
                       "name": "video",
                       "contentType": "video/webm",
                       "path": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\test-results\\organizationTab-Verify-use-ca728-ick-on-the-Organization-tab-adminPortal\\video.webm"
                     }
-                  ]
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Github Repo's\\CloudUserAutomationFramework\\CloudUserAutomation\\pages\\basePage.ts",
+                    "column": 11,
+                    "line": 44
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
           "id": "df5e8fea5e2ed808b931-7470c0675f21af6e9687",
@@ -715,11 +143,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-10T20:14:18.774Z",
-    "duration": 90372.185,
-    "expected": 10,
+    "startTime": "2025-01-11T08:38:06.890Z",
+    "duration": 15685.708999999999,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 2,
+    "unexpected": 1,
     "flaky": 0
   }
 }
