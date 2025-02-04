@@ -1,0 +1,2 @@
+Login Successful
+Clicked on Scheduler Licenses tab successfully

@@ -1,0 +1,34 @@
+import { test, expect } from '@playwright/test';
+
+test.skip('test', async ({ page }) => {
+  await page.goto('https://portal.dev.biosero.com');
+  await page.getByRole('textbox', { name: 'Sign in name' }).click();
+  await page.getByRole('textbox', { name: 'Sign in name' }).fill('rammarshivane@biosero.com');
+  await page.getByRole('textbox', { name: 'Password' }).click();
+  await page.getByRole('textbox', { name: 'Password' }).fill('Ram@7670');
+  await page.getByRole('textbox', { name: 'Password' }).press('Tab');
+  await page.getByRole('link', { name: 'Forgot your password?' }).press('Tab');
+  await page.getByRole('checkbox', { name: 'Keep me signed in' }).press('Tab');
+  await page.getByRole('button', { name: 'Sign in' }).click();
+  await page.waitForTimeout(10000);
+  //await page.getByRole('heading', { name: 'Welcome to the Biosero Portal' }).click();
+  await page.getByRole('link', { name: 'corporate_fare Organization' }).click();
+  //await page.getByRole('link', { name: 'groups Members' }).click();
+  await page.getByRole('link', { name: 'mail Invitations' }).click();
+  await page.getByRole('link', { name: 'list_alt Subscriptions' }).click();
+ // await page.getByRole('button', { name: 'All' }).click();
+  await page.getByRole('button', { name: 'Active', exact: true }).click();
+  await page.getByRole('button', { name: 'Inactive' }).click();
+  await page.getByRole('button', { name: 'Expired' }).click();
+  await page.getByRole('link', { name: 'encrypted Scheduler Licenses' }).click();
+  const page1Promise = page.waitForEvent('popup');
+  await page.getByRole('link', { name: 'deployed_code Marketplace' }).click();
+  const page1 = await page1Promise;
+  await page.getByRole('link', { name: 'manage_accounts Account' }).click();
+  await page.locator('#user-display-name-input').click();
+  await page.locator('#user-display-name-input').fill('ram Marshivane12');
+  await page.getByRole('button', { name: 'Save' }).click();
+  await page.getByRole('button', { name: 'rM' }).click();
+  await page.getByRole('button', { name: 'logout Sign out' }).click();
+  //await page.goto('https://bioserob2cdev.b2clogin.com/bioserob2cdev.onmicrosoft.com/b2c_1a_signup_signin/oauth2/v2.0/authorize?client_id=0b878f9b-e2c2-433b-9229-fd285f1ef02b&scope=https%3A%2F%2FBioseroB2CDev.onmicrosoft.com%2Fgraph-api%2FInvitations.ReadWrite%20https%3A%2F%2FBioseroB2CDev.onmicrosoft.com%2Fgraph-api%2FOrganizations.ReadWrite%20openid%20profile%20offline_access&redirect_uri=https%3A%2F%2Fportal.dev.biosero.com%2Fauthentication%2Flogin-callback&client-request-id=e9b4b7c9-3584-4cd8-b2c7-c420ddec7c8d&response_mode=fragment&response_type=code&x-client-SKU=msal.js.browser&x-client-VER=2.16.1&x-client-OS=&x-client-CPU=&client_info=1&code_challenge=76O7QYf5txMlX6yoL7EVaavgr-zlqL_XFqVaR3fniIo&code_challenge_method=S256&nonce=27c1e524-16e0-4d0f-891d-ef15e88ddbdd&state=eyJpZCI6IjMxN2MwNDg0LTgwNGItNDNiNS1hODA2LTI2ZDE3M2MwODU3YiIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D%7CyQgxFXwvSSBnExe6eXorBPBKbd6V6OCLZPqoWKy-CcY');
+});

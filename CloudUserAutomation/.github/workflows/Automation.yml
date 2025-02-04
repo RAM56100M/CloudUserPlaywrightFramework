@@ -1,0 +1,81 @@
+name: Biosero Automation Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+  schedule:
+    - cron: '40 19 * * *'  # Runs every day at 6:30 AM UTC
+
+
+jobs:
+  test:
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout code
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # Step 2: Set up Node.js environment
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    # Step 3: Install dependencies
+    - name: Install dependencies
+      run: npm ci --with-deps
+
+    # Step 4: Install Playwright browsers
+    - name: Install Playwright browsers
+      run: npx playwright install
+
+    # Step 5: Running Playwright Test
+    - name: Running Playwright Test
+      run: npm run runChrome
+
+    # Step 6: List files for debugging - This will show the contents before uploading artifacts
+    - name: List files in the workspace for debugging
+      run: ls -R ${GITHUB_WORKSPACE}
+
+    # Step 7: Upload Playwright report as artifact (Always run, even if tests fail)
+    - name: Upload Playwright Report Artifact
+      if: always()  # Ensure this runs regardless of previous step result
+      uses: actions/upload-artifact@v4
+      with:
+        name: playwright-report
+        path: playwright-report/**
+
+    # Step 8: Upload additional artifact (Always run, even if tests fail)
+    - name: Upload additional artifact
+      if: always()  # Ensure this runs regardless of previous step result
+      uses: actions/upload-artifact@v4
+      with:
+        name: my-artifact  # The name of the artifact
+        path: ./output/report.txt  # Adjust this path if the file is elsewhere
+
+    # Step 9: Show artifacts for debugging (Always run, even if tests fail)
+    - name: Show artifacts
+      if: always()  # Ensure this runs regardless of previous step result
+      run: ls -lR
+
+    # Step 10: Send email with the test report (Always run, even if tests fail)
+    - name: Send email with the test report
+      if: always()  # Ensure the email is sent even if tests fail
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 587
+        username: ${{ secrets.GMAIL_USERNAME }}  
+        password: ${{ secrets.GMAIL_APP_PASSWORD }}     
+        from: 'ram.marshivane@exaqode.com'
+        to: 'rammarshivane@gmail.com,ram.marshivane@exaqode.com'
+        subject: 'Test Automation Report for Test Execution'
+        body: 'This is the test execution report. Please download it and open in any browser.'
+        attachments: ${{ github.workspace }}/playwright-report/**/*.html

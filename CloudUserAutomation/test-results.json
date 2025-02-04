@@ -1,0 +1,294 @@
+{
+  "config": {
+    "configFile": "F:\\CloudUserAutomation\\playwright.config.ts",
+    "rootDir": "F:/CloudUserAutomation/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        null
+      ],
+      [
+        "dot",
+        null
+      ],
+      [
+        "F:\\CloudUserAutomation\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "F:/CloudUserAutomation/test-results",
+        "repeatEach": 1,
+        "retries": 2,
+        "metadata": {},
+        "id": "adminPortal",
+        "name": "adminPortal",
+        "testDir": "F:/CloudUserAutomation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.50.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "subscriptionTab.spec.ts",
+      "file": "subscriptionTab.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify user can Click on the Subscriptions tab",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "adminPortal",
+              "projectName": "adminPortal",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-02-04T14:49:26.639Z",
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "a410451e947e2ed05032-db3c4764242bd86bbe9f",
+          "file": "subscriptionTab.spec.ts",
+          "line": 12,
+          "column": 6
+        },
+        {
+          "title": "Verify total number of Active subcriptions on the Subscriptions tab",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "adminPortal",
+              "projectName": "adminPortal",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 9537,
+                  "error": {
+                    "message": "Error: Failed to Login",
+                    "stack": "Error: Failed to Login\n    at subscriptionsPage.doLogin (F:\\CloudUserAutomation\\pages\\basePage.ts:44:11)\n    at F:\\CloudUserAutomation\\tests\\subscriptionTab.spec.ts:9:3",
+                    "location": {
+                      "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                      "column": 11,
+                      "line": 44
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m     }\n \u001b[90m 47 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                        "column": 11,
+                        "line": 44
+                      },
+                      "message": "Error: Failed to Login\n\n\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m     }\n \u001b[90m 47 |\u001b[39m\u001b[0m\n\u001b[2m    at subscriptionsPage.doLogin (F:\\CloudUserAutomation\\pages\\basePage.ts:44:11)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\subscriptionTab.spec.ts:9:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Retry Attempt: 0\n"
+                    },
+                    {
+                      "text": "An error occurred while trying to login: TimeoutError: locator.fill: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input#signInName')\u001b[22m\n\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-02-04T14:49:26.640Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\subscriptionTab-Verify-tot-cabf1-ns-on-the-Subscriptions-tab-adminPortal\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                    "column": 11,
+                    "line": 44
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "status": "failed",
+                  "duration": 9684,
+                  "error": {
+                    "message": "Error: Failed to Login",
+                    "stack": "Error: Failed to Login\n    at subscriptionsPage.doLogin (F:\\CloudUserAutomation\\pages\\basePage.ts:44:11)\n    at F:\\CloudUserAutomation\\tests\\subscriptionTab.spec.ts:9:3",
+                    "location": {
+                      "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                      "column": 11,
+                      "line": 44
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m     }\n \u001b[90m 47 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                        "column": 11,
+                        "line": 44
+                      },
+                      "message": "Error: Failed to Login\n\n\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m     }\n \u001b[90m 47 |\u001b[39m\u001b[0m\n\u001b[2m    at subscriptionsPage.doLogin (F:\\CloudUserAutomation\\pages\\basePage.ts:44:11)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\subscriptionTab.spec.ts:9:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Retry Attempt: 1\n"
+                    },
+                    {
+                      "text": "An error occurred while trying to login: TimeoutError: locator.fill: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input#signInName')\u001b[22m\n\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-02-04T14:49:40.155Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\subscriptionTab-Verify-tot-cabf1-ns-on-the-Subscriptions-tab-adminPortal-retry1\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "F:\\CloudUserAutomation\\test-results\\subscriptionTab-Verify-tot-cabf1-ns-on-the-Subscriptions-tab-adminPortal-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                    "column": 11,
+                    "line": 44
+                  }
+                },
+                {
+                  "workerIndex": 2,
+                  "status": "failed",
+                  "duration": 8374,
+                  "error": {
+                    "message": "Error: Failed to Login",
+                    "stack": "Error: Failed to Login\n    at subscriptionsPage.doLogin (F:\\CloudUserAutomation\\pages\\basePage.ts:44:11)\n    at F:\\CloudUserAutomation\\tests\\subscriptionTab.spec.ts:9:3",
+                    "location": {
+                      "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                      "column": 11,
+                      "line": 44
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m     }\n \u001b[90m 47 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                        "column": 11,
+                        "line": 44
+                      },
+                      "message": "Error: Failed to Login\n\n\u001b[90m   at \u001b[39m..\\pages\\basePage.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m     } \u001b[36mcatch\u001b[39m (error) {\n \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(\u001b[32m`An error occurred while trying to login: ${error}`\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Failed to Login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     }\n \u001b[90m 46 |\u001b[39m     }\n \u001b[90m 47 |\u001b[39m\u001b[0m\n\u001b[2m    at subscriptionsPage.doLogin (F:\\CloudUserAutomation\\pages\\basePage.ts:44:11)\u001b[22m\n\u001b[2m    at F:\\CloudUserAutomation\\tests\\subscriptionTab.spec.ts:9:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Retry Attempt: 2\n"
+                    },
+                    {
+                      "text": "An error occurred while trying to login: TimeoutError: locator.fill: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input#signInName')\u001b[22m\n\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 2,
+                  "startTime": "2025-02-04T14:49:51.841Z",
+                  "attachments": [
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "F:\\CloudUserAutomation\\test-results\\subscriptionTab-Verify-tot-cabf1-ns-on-the-Subscriptions-tab-adminPortal-retry2\\video.webm"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "F:\\CloudUserAutomation\\pages\\basePage.ts",
+                    "column": 11,
+                    "line": 44
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a410451e947e2ed05032-3a43ed0355e1ea35d0a5",
+          "file": "subscriptionTab.spec.ts",
+          "line": 23,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-02-04T14:49:25.617Z",
+    "duration": 34968.236000000004,
+    "expected": 0,
+    "skipped": 1,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
